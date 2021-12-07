@@ -1,12 +1,12 @@
 {
     "pipeline": {
-      "name": "getPDCA"
+      "name": "getPDAC"
     },
     "transform": {
       "image": "bhklab/pharmacogx2.0:v3",
       "cmd": [
         "Rscript", 
-        "/pfs/getPDCA/getPDCA.R"]
+        "/pfs/getPDAC/getPDAC.R"]
     },
     "resource_requests": {
       "memory": "8G"
@@ -15,7 +15,7 @@
       "cross": [
         {
           "git": {
-            "url": "https://github.com/BHKLAB-Pachyderm/getPDCA.git",
+            "url": "https://github.com/BHKLAB-Pachyderm/getPDAC.git",
             "name": "",
             "branch": "main"
           }
