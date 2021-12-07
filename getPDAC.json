@@ -1,0 +1,25 @@
+{
+    "pipeline": {
+      "name": "getPDAC"
+    },
+    "transform": {
+      "image": "bhklab/pharmacogx2.0:v3",
+      "cmd": [
+        "Rscript", 
+        "/pfs/getPDAC/getPDAC.R"]
+    },
+    "resource_requests": {
+      "memory": "8G"
+    },
+    "input": {
+      "cross": [
+        {
+          "git": {
+            "url": "https://github.com/BHKLAB-Pachyderm/getPDAC.git",
+            "name": "",
+            "branch": "main"
+          }
+        }
+      ]
+    }
+}
